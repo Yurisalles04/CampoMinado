@@ -1,54 +1,59 @@
-Campo Minado - Projeto Java
+Minesweeper - Java Project
 
-Este é um projeto em Java que simula o clássico jogo Campo Minado. O objetivo do jogo é revelar todas as células de uma grade sem tocar em uma mina. O jogador deve usar as dicas fornecidas pelas células reveladas para evitar minas e revelar o restante do campo com sucesso.
+This is a Java project that simulates the classic Minesweeper game. The goal of the game is to reveal all the cells of a grid without touching a mine. The player must use the hints provided by the revealed cells to avoid mines and successfully reveal the rest of the field.
 
-Funcionalidades
-O jogo Campo Minado apresenta as seguintes funcionalidades principais:
+Features
 
-Criação de Tabuleiro
-O tabuleiro do jogo é composto por uma grade de células, onde algumas células contêm minas e outras fornecem dicas numéricas. As dicas indicam quantas minas estão nas células adjacentes.
+The Minesweeper game includes the following main features:
 
-Jogo Interativo
-O jogador pode clicar em células para revelá-las. Caso o jogador revele uma mina, o jogo acaba. Caso o jogador revele todas as células seguras, ele vence.
+Board Creation
+The game board consists of a grid of cells, some containing mines and others providing numeric hints. The hints indicate how many mines are in the adjacent cells.
 
-Marcação de Minas
-O jogador pode marcar células com bandeiras, caso ache que elas contêm minas. Essa funcionalidade ajuda a evitar toques acidentais nas minas.
+Interactive Gameplay
+The player can click on cells to reveal them. If a mine is revealed, the game ends. If the player reveals all the safe cells, they win.
 
-Vencer ou Perder
-O jogador vence ao revelar todas as células seguras. O jogo termina em derrota se uma célula com mina for revelada.
+Mine Flagging
+The player can mark cells with flags if they believe they contain mines. This functionality helps prevent accidental touches on mines.
 
-Estrutura do Projeto
-O projeto consiste em várias classes para organizar o funcionamento do jogo:
+Win or Lose
+The player wins by revealing all the safe cells. The game ends in defeat if a cell with a mine is revealed.
 
-CampoMinado: Classe principal que gerencia o tabuleiro e as interações do jogador.
-Tabuleiro: Representa o campo de jogo, contendo as células, minas e lógica para cálculo das células adjacentes.
-Célula: Representa uma célula do campo minado, que pode estar oculta, revelada ou marcada como bandeira.
-Jogo: Lógica que gerencia o estado do jogo, incluindo verificação de vitória e derrota.
-Como Jogar
-O jogo é baseado em texto, onde o jogador interage através do terminal ou console. O objetivo é revelar todas as células sem tocar nas minas. Quando o jogo começa, o tabuleiro é gerado com um número fixo de minas espalhadas aleatoriamente.
+Project Structure
 
-Jogar no Console
-Iniciar o Jogo:
-O jogo começa com a criação de um campo minado com uma quantidade específica de minas e células vazias. O jogador escolhe uma célula para revelar e pode marcar células suspeitas como minas.
+The project consists of several classes to organize the game’s functionality:
 
-Revelar Células:
-O jogador escolhe coordenadas (linha e coluna) para revelar uma célula. Se a célula contiver uma mina, o jogo termina com derrota. Caso contrário, o número de minas ao redor será mostrado na célula.
+CampoMinado: Main class that manages the board and player interactions.
+Tabuleiro: Represents the game field, containing the cells, mines, and logic for calculating adjacent cells.
+Célula: Represents a cell in the Minesweeper field, which can be hidden, revealed, or flagged.
+Jogo: Logic that manages the game state, including victory and defeat checks.
+How to Play
 
-Marcar Células com Bandeira:
-O jogador pode marcar uma célula com uma bandeira para indicar que acredita que a célula contém uma mina. Isso ajuda a evitar erros ao clicar.
+The game is text-based, where the player interacts through the terminal or console. The objective is to reveal all the cells without touching any mines. When the game starts, the board is generated with a fixed number of mines randomly spread out.
 
-Vencer:
-O jogo é vencido quando todas as células seguras são reveladas sem que uma mina tenha sido tocada.
+Playing in the Console
 
-Exemplo de Jogo no Console
+Start the Game
+The game begins by creating a Minesweeper field with a specific number of mines and empty cells. The player chooses a cell to reveal and can mark suspicious cells as containing mines.
+
+Reveal Cells
+The player chooses coordinates (row and column) to reveal a cell. If the cell contains a mine, the game ends with a loss. Otherwise, the number of adjacent mines is shown in the cell.
+
+Flagging Cells
+The player can mark a cell with a flag to indicate that they believe the cell contains a mine. This helps avoid mistakes when clicking.
+
+Win the Game
+The game is won when all safe cells are revealed without touching a mine.
+
+Example of a Game in the Console
+
 java
 Copiar
-Sistema de Tabuleiro:
-- '1' representa uma célula com 1 mina ao redor.
-- '0' representa uma célula segura sem minas ao redor.
-- '*' representa uma mina.
+// Board System:
+- '1' represents a cell with 1 mine around it.
+- '0' represents a safe cell with no mines around it.
+- '*' represents a mine.
 
-1 1 * 0
-0 * 1 0
-1 1 0 *
-O jogador pode interagir com esse campo e o jogo irá fornecer as opções de escolha para revelar e marcar células.
+1 1 * 0  
+0 * 1 0  
+1 1 0 *  
+The player can interact with this field, and the game will provide options to choose cells to reveal and flag.
